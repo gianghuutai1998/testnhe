@@ -1,0 +1,15 @@
+dotnet publish -o out 
+
+sudo apt-get update
+sudo apt-get install mysql-server
+sudo service mysql start
+
+mysql -uroot -p<password>
+Exit;
+
+dotnet tool install —global dotnet-ef —version 3.0.0
+ls -a .dotnet/tools/
+export PATH=“$PATH:$HOME/.dotnet/tools/”
+
+dotnet BookStore.dll --do-migration
+dotnet BookStore.dll
